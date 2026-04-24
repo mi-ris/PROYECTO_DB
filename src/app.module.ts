@@ -3,6 +3,7 @@ import { ConfigModule } from '@nestjs/config';
 
 import { UsuariosModule } from './usuarios/usuarios.module';
 import { PrismaService } from './prisma.service';
+import { UsuarioModule } from './usuario/usuario.module';
 
 @Module({
   imports: [
@@ -10,6 +11,7 @@ import { PrismaService } from './prisma.service';
       isGlobal: true,
     }),
     UsuariosModule,
+    UsuarioModule,
   ],
   providers: [PrismaService],
 })
