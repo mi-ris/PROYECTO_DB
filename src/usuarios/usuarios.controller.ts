@@ -5,11 +5,10 @@ import { UsuariosService } from './usuarios.service';
 export class UsuariosController {
   constructor(private readonly usuariosService: UsuariosService) {}
 
-  @Post()
-  create(@Body() body: { nombre: string }) {
-    return this.usuariosService.create(body);
-  }
-
+ @Post()
+create(@Body() data: { nombre: string }) {
+  return this.usuariosService.create(data);
+}
   @Get()
   findAll() {
     return this.usuariosService.findAll();
